@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>IMXReconGUI</class>
+ <widget class="QMainWindow" name="IMXReconGUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>766</width>
+    <height>620</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>IMX Recon GUI</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="ReconGUIResource.qrc">
+    <normaloff>:/MainWindowIcon/Images/LNLS_logo_mini.jpg</normaloff>:/MainWindowIcon/Images/LNLS_logo_mini.jpg</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:rgb(234, 234, 234)</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="3" column="0" colspan="2">
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0" colspan="2">
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="ExperimentInformationLabel">
+          <property name="font">
+           <font>
+            <family>Liberation Sans</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Experiment Information</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="AngleRangeLabel">
+        <property name="text">
+         <string>Angle Range</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLabel" name="AngleRangeValue">
+        <property name="text">
+         <string>Waiting...</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="NumberofProjectionsLabel">
+        <property name="text">
+         <string># of Projections</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLabel" name="NumberofProjectionsValue">
+        <property name="text">
+         <string>Waiting...</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="ExposureTimeLabel">
+        <property name="text">
+         <string>Exposure Time</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="ExposureTimeValue">
+        <property name="text">
+         <string>Waiting...</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QLabel" name="DetectorPositionLabel">
+        <property name="text">
+         <string>Detector Position</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLabel" name="DetectorPositionValue">
+        <property name="text">
+         <string>Waiting...</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="FiltersLabel">
+        <property name="text">
+         <string>Filters</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLabel" name="FilterValue">
+        <property name="text">
+         <string>Waiting...</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="PixelSizeLabel">
+        <property name="text">
+         <string>Pixel Size</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QLabel" name="PixelSizeValue">
+        <property name="text">
+         <string>Waiting...</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLabel" name="FieldofViewLabel">
+        <property name="text">
+         <string>Field of View</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <widget class="QLabel" name="FieldofViewValue">
+        <property name="text">
+         <string>Waiting...</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0" colspan="2">
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QPushButton" name="MoreInfoButton">
+          <property name="text">
+           <string>More Info</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Preferred</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="Line" name="line_10">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="9" column="0" colspan="2">
+       <widget class="QLabel" name="label_2">
+        <property name="font">
+         <font>
+          <family>Liberation Sans</family>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>Recon Method</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="0" colspan="2">
+       <widget class="QLabel" name="label_3">
+        <property name="font">
+         <font>
+          <family>Liberation Sans</family>
+          <pointsize>20</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#0055ff;&quot;&gt;RAfT&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="0" colspan="2">
+       <widget class="Line" name="line_6">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="7" column="3">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="1" column="1">
+       <widget class="QPushButton" name="CloseGuiButton">
+        <property name="text">
+         <string>Close</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QProgressBar" name="progressBar">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">Base:rgb(0, 85, 255)</string>
+        </property>
+        <property name="value">
+         <number>100</number>
+        </property>
+        <property name="invertedAppearance">
+         <bool>false</bool>
+        </property>
+        <property name="textDirection">
+         <enum>QProgressBar::TopToBottom</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="2" column="0" colspan="4">
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="4">
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QLabel" name="IMXGUINameLabel">
+        <property name="font">
+         <font>
+          <family>Liberation Sans</family>
+          <pointsize>16</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>IMX Tomography Reconstruction User Interface</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="LNLSLogoImageLabel">
+        <property name="layoutDirection">
+         <enum>Qt::RightToLeft</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap resource="ReconGUIResource.qrc">:/MainWindowIcon/Images/LNLS_logo_mini.jpg</pixmap>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0" colspan="4">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="FilePathLabel">
+        <property name="text">
+         <string>File Path</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="FilePathLineEdit">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="FilePathChooseButton">
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="ReconGUIResource.qrc">
+          <normaloff>:/FolderIcon/Images/closed_folder.png</normaloff>:/FolderIcon/Images/closed_folder.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="3">
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="8" column="0">
+       <widget class="QLabel" name="ImageSizeLabel">
+        <property name="text">
+         <string>Image Size</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="3">
+       <widget class="QLabel" name="ImageFormatLabel">
+        <property name="text">
+         <string>Image Format</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="CenteringLabel">
+        <property name="text">
+         <string>Centering (Only 360º)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QLineEdit" name="StartSliceLineEdit">
+        <property name="text">
+         <string>1024</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="3">
+       <widget class="QLabel" name="StartSliceLabel">
+        <property name="text">
+         <string>Start Slice</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="4">
+       <widget class="QComboBox" name="ImageFormaComboBox">
+        <item>
+         <property name="text">
+          <string>8 bits</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>32 bits</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QLabel" name="ThresholdLabel">
+        <property name="text">
+         <string>Theshold</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="1">
+       <widget class="QComboBox" name="ImageSizeComboBox">
+        <item>
+         <property name="text">
+          <string>2048 pixels</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1024 pixels</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>512 pixels</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <widget class="QLineEdit" name="ThresholdLineEdit">
+        <property name="text">
+         <string>15</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="3">
+       <widget class="QLabel" name="RegularizationLabel">
+        <property name="text">
+         <string>Regularization Factor</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="5">
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QLabel" name="BasicParametersLabel">
+          <property name="font">
+           <font>
+            <family>Liberation Sans</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Basic Parameters</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="6" column="4">
+       <widget class="QLineEdit" name="RegularizationLineEdit">
+        <property name="text">
+         <string>0.00</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="3">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Number of Blocks</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0" colspan="5">
+       <widget class="Line" name="line_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="0">
+       <widget class="QLabel" name="FilterCompositionLabel">
+        <property name="text">
+         <string>Filter Composition</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="RotationShiftLabel">
+        <property name="text">
+         <string>Rotation Shift</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0" colspan="5">
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <widget class="QLabel" name="AdvancedParametersLabel">
+          <property name="font">
+           <font>
+            <family>Liberation Sans</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>Advanced Parameters</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="2" column="4">
+       <widget class="QLineEdit" name="FinalSliceLineEdit">
+        <property name="text">
+         <string>1024</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="3">
+       <widget class="QLabel" name="FinalSliceLabel">
+        <property name="text">
+         <string>Final Slice</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="1">
+       <widget class="QSlider" name="FilterCompositionSlider">
+        <property name="maximum">
+         <number>5</number>
+        </property>
+        <property name="pageStep">
+         <number>0</number>
+        </property>
+        <property name="value">
+         <number>1</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBothSides</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="RotationShiftLineEdit">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QLineEdit" name="CenteringLineEdit">
+        <property name="text">
+         <string>1700</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="1">
+       <widget class="QComboBox" name="SaveImageAsComboBox">
+        <item>
+         <property name="text">
+          <string>Block</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Single Files</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="9" column="4">
+       <widget class="QLineEdit" name="PaddingLineEdit">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="3">
+       <widget class="QLabel" name="PaddingLabel">
+        <property name="text">
+         <string>Padding</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0">
+       <widget class="QLabel" name="SaveImageAsLabel">
+        <property name="text">
+         <string>Save Slices as</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="0" colspan="5">
+       <widget class="Line" name="line_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="2" rowspan="5">
+       <widget class="Line" name="line_7">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="4">
+       <widget class="QSlider" name="NumberofBlocksSlider">
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>5</number>
+        </property>
+        <property name="pageStep">
+         <number>0</number>
+        </property>
+        <property name="value">
+         <number>1</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBothSides</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="2">
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="text">
+         <string>Adjust</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="2" rowspan="3">
+       <widget class="Line" name="line_4">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="5" column="3">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="MoreOptionsLabel">
+        <property name="font">
+         <font>
+          <family>Liberation Sans</family>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="text">
+         <string>More Options</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="1">
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="text">
+           <string>Sinogram</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QPushButton" name="pushButton_3">
+          <property name="text">
+           <string>H5 Options</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="pushButton">
+          <property name="text">
+           <string>Projection</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="pushButton_4">
+          <property name="text">
+           <string>Folder</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="5" column="0">
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <spacer name="StartReconButtonhorizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Preferred</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="StartReconButton">
+        <property name="text">
+         <string>Start Recon</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="StopReconButton">
+        <property name="text">
+         <string>Stop Recon</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="StartReconButtonhorizontalSpacer_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Preferred</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="2" rowspan="3">
+     <widget class="Line" name="line_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="6" column="0" colspan="4">
+     <widget class="Line" name="line_8">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>766</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionContact"/>
+    <addaction name="actionVersion"/>
+   </widget>
+   <addaction name="menuAbout"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionVersion">
+   <property name="text">
+    <string>Version</string>
+   </property>
+  </action>
+  <action name="actionContact">
+   <property name="text">
+    <string>Contacts</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="ReconGUIResource.qrc"/>
+  <include location="ReconGUIResource.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>CloseGuiButton</sender>
+   <signal>clicked()</signal>
+   <receiver>IMXReconGUI</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>921</x>
+     <y>505</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>785</x>
+     <y>486</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>StartReconButton</sender>
+   <signal>clicked()</signal>
+   <receiver>progressBar</receiver>
+   <slot>show()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>125</x>
+     <y>498</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>356</x>
+     <y>504</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
