@@ -8,6 +8,7 @@ import numpy as np
 import h5py
 #from matplotlib import pyplot as plt
 import sys
+import pyqtgraph as pg
 
 def getArray(tomo_path, dark_path, flat_path):
 	f_tomo = h5py.File(tomo_path, "r")
@@ -24,14 +25,22 @@ def getArray(tomo_path, dark_path, flat_path):
 
 	numberofprojections=f_tomo["images"].shape[0]
 	
-	return (numberofprojections, data_prev)
+
+	
+	return (numberofprojections, dark)
 	
 
 
 		
 if __name__ == "__main__":
-	tomo_path = sys.argv[1]
-	dark_path = sys.argv[2]
-	flat_path = sys.argv[3]
+	tomo_path = "/mnt/Data/IMX/Data/Pitch_Roll_BIC_Test/tomo.h5"#sys.argv[1]
+	dark_path = "/mnt/Data/IMX/Data/Pitch_Roll_BIC_Test/tomo_dark_before.h5"#sys.argv[2]
+	flat_path = "/mnt/Data/IMX/Data/Pitch_Roll_BIC_Test/tomo_flats.h5"#sys.argv[3]
 
-	getArray(tomo_path,dark_path,flat_path)
+	p, data_prev = getArray(tomo_path,dark_path,flat_path)
+	
+	
+	imv = pg.ImageView()
+	imv.show()
+	imv.setImage(data_prev)
+	#pg.image(data_prev)

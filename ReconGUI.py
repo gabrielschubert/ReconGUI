@@ -170,7 +170,8 @@ class Ui_IMXReconGUI(object):
     ###################### ACTIONS ######################
 
     def choosePath(self):
-        cmd = "python3 FolderDialog.py"
+		
+        cmd = "python3 Functions/FolderDialog.py"
         path = (subprocess.check_output(cmd, shell=True)).decode("utf-8")
         #print ("PATH!!!", path)
         #print (type(path))

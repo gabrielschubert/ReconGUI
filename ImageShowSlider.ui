@@ -36,10 +36,17 @@
     </layout>
    </item>
    <item row="0" column="0" colspan="2">
-    <widget class="QGraphicsView" name="ImageShowGraphicsView"/>
+    <widget class="ImageView" name="ImageShowGraphicsView"/>
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ImageView</class>
+   <extends>QGraphicsView</extends>
+   <header>pyqtgraph</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
