@@ -31,8 +31,12 @@ class Widget(QtGui.QWidget):
         # set it to the first image, if you want.
         self.sliderMoved(0)
 
-        self.slider.sliderMoved..movedconnect(self.sliderMoved)
-
+        self.slider.sliderMoved.movedconnect(self.sliderMoved)
+        
+        
+        
+        
+        
     def sliderMoved(self, val):
         print "Slider moved to:", val
         try:
