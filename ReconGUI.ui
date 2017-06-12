@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>766</width>
-    <height>620</height>
+    <width>873</width>
+    <height>623</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -22,7 +22,129 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="3" column="0" colspan="2">
+    <item row="2" column="0" colspan="6">
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="4" rowspan="5">
+     <widget class="Line" name="line_9">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="6">
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="FilePathLabel">
+        <property name="text">
+         <string>File Path</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="FilePathLineEdit">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="FilePathChooseButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="ReconGUIResource.qrc">
+          <normaloff>:/FolderIcon/Images/closed_folder.png</normaloff>:/FolderIcon/Images/closed_folder.png</iconset>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="7" column="3">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="MoreOptionsLabel">
+        <property name="font">
+         <font>
+          <family>Liberation Sans</family>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="text">
+         <string>More Options</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="1">
+         <widget class="QPushButton" name="OpenSinogramButton">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="text">
+           <string>Sinogram</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QPushButton" name="H5OptionsButton">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="text">
+           <string>H5 Options</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QPushButton" name="OpenProjectionButton">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="text">
+           <string>Projection</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="OpenFolderButton">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="text">
+           <string>Folder</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="2" rowspan="5">
+     <widget class="Line" name="line_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="0" rowspan="5" colspan="2">
      <layout class="QFormLayout" name="formLayout">
       <item row="0" column="0" colspan="2">
        <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -172,6 +294,9 @@
        <layout class="QVBoxLayout" name="verticalLayout_2">
         <item>
          <widget class="QPushButton" name="MoreInfoButton">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
           <property name="text">
            <string>More Info</string>
           </property>
@@ -203,7 +328,7 @@
        </layout>
       </item>
       <item row="9" column="0" colspan="2">
-       <widget class="QLabel" name="label_2">
+       <widget class="QLabel" name="ReconMethodLabel">
         <property name="font">
          <font>
           <family>Liberation Sans</family>
@@ -221,7 +346,7 @@
        </widget>
       </item>
       <item row="10" column="0" colspan="2">
-       <widget class="QLabel" name="label_3">
+       <widget class="QLabel" name="RAfTLabel">
         <property name="font">
          <font>
           <family>Liberation Sans</family>
@@ -245,46 +370,104 @@
         </property>
        </widget>
       </item>
+      <item row="12" column="0" colspan="2">
+       <layout class="QVBoxLayout" name="verticalLayout_12">
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Preferred</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="OpenImageLabel">
+          <property name="font">
+           <font>
+            <family>Liberation Sans</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Image</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="OpenImageComboBox">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <spacer name="OpenImageButtonHorizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Preferred</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="OpenImageButton">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>Open</string>
+            </property>
+            <property name="icon">
+             <iconset resource="ReconGUIResource.qrc">
+              <normaloff>:/ImageJ/Images/ImageJ.png</normaloff>:/ImageJ/Images/ImageJ.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="OpenImageButtonHorizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Preferred</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
      </layout>
     </item>
-    <item row="7" column="3">
-     <layout class="QGridLayout" name="gridLayout_2">
-      <item row="1" column="1">
-       <widget class="QPushButton" name="CloseGuiButton">
-        <property name="text">
-         <string>Close</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QProgressBar" name="progressBar">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">Base:rgb(0, 85, 255)</string>
-        </property>
-        <property name="value">
-         <number>100</number>
-        </property>
-        <property name="invertedAppearance">
-         <bool>false</bool>
-        </property>
-        <property name="textDirection">
-         <enum>QProgressBar::TopToBottom</enum>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="2" column="0" colspan="4">
-     <widget class="Line" name="line">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="0" column="0" colspan="4">
+    <item row="0" column="0" colspan="6">
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
        <widget class="QLabel" name="IMXGUINameLabel">
@@ -319,48 +502,150 @@
       </item>
      </layout>
     </item>
-    <item row="1" column="0" colspan="4">
-     <layout class="QHBoxLayout" name="horizontalLayout_3">
-      <item>
-       <widget class="QLabel" name="FilePathLabel">
+    <item row="10" column="0" colspan="6">
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="1" column="2">
+       <widget class="QPushButton" name="CloseGuiButton">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="text">
-         <string>File Path</string>
+         <string>Close</string>
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QLineEdit" name="FilePathLineEdit">
+      <item row="1" column="1">
+       <widget class="QProgressBar" name="progressBar">
         <property name="enabled">
          <bool>false</bool>
         </property>
+        <property name="styleSheet">
+         <string notr="true">Base:rgb(0, 85, 255)</string>
+        </property>
+        <property name="value">
+         <number>100</number>
+        </property>
+        <property name="textVisible">
+         <bool>true</bool>
+        </property>
+        <property name="invertedAppearance">
+         <bool>false</bool>
+        </property>
+        <property name="textDirection">
+         <enum>QProgressBar::TopToBottom</enum>
+        </property>
        </widget>
       </item>
-      <item>
-       <widget class="QPushButton" name="FilePathChooseButton">
+      <item row="1" column="0">
+       <widget class="QLabel" name="ProgressLabel">
         <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset resource="ReconGUIResource.qrc">
-          <normaloff>:/FolderIcon/Images/closed_folder.png</normaloff>:/FolderIcon/Images/closed_folder.png</iconset>
+         <string>Wait. Reconstruction in process...</string>
         </property>
        </widget>
       </item>
      </layout>
     </item>
-    <item row="3" column="3">
-     <layout class="QGridLayout" name="gridLayout_4">
-      <item row="8" column="0">
-       <widget class="QLabel" name="ImageSizeLabel">
+    <item row="9" column="0" colspan="6">
+     <widget class="Line" name="line_8">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="5" rowspan="5">
+     <layout class="QVBoxLayout" name="verticalLayout_8">
+      <item>
+       <widget class="QLabel" name="ReconQueueLabel">
+        <property name="font">
+         <font>
+          <family>Liberation Sans</family>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
         <property name="text">
-         <string>Image Size</string>
+         <string>Recon Queue</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
-      <item row="8" column="3">
-       <widget class="QLabel" name="ImageFormatLabel">
+      <item>
+       <widget class="QTextEdit" name="ReconQueueTextEdit"/>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <spacer name="StartQueueButtonHorizontalSpacer_1">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Preferred</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="StartQueueButton">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="text">
+           <string>Start Queue</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="StopQueueButton">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="text">
+           <string>Stop Queue</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="StartQueueButtonHorizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Preferred</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item row="3" column="3">
+     <layout class="QGridLayout" name="gridLayout_4">
+      <item row="1" column="4">
+       <widget class="QLineEdit" name="StartSliceLineEdit">
         <property name="text">
-         <string>Image Format</string>
+         <string>1024</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="2" rowspan="5">
+       <widget class="Line" name="line_7">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
         </property>
        </widget>
       </item>
@@ -371,13 +656,6 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="4">
-       <widget class="QLineEdit" name="StartSliceLineEdit">
-        <property name="text">
-         <string>1024</string>
-        </property>
-       </widget>
-      </item>
       <item row="1" column="3">
        <widget class="QLabel" name="StartSliceLabel">
         <property name="text">
@@ -385,44 +663,11 @@
         </property>
        </widget>
       </item>
-      <item row="8" column="4">
-       <widget class="QComboBox" name="ImageFormaComboBox">
-        <item>
-         <property name="text">
-          <string>8 bits</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>32 bits</string>
-         </property>
-        </item>
-       </widget>
-      </item>
       <item row="6" column="0">
        <widget class="QLabel" name="ThresholdLabel">
         <property name="text">
          <string>Theshold</string>
         </property>
-       </widget>
-      </item>
-      <item row="8" column="1">
-       <widget class="QComboBox" name="ImageSizeComboBox">
-        <item>
-         <property name="text">
-          <string>2048 pixels</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>1024 pixels</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>512 pixels</string>
-         </property>
-        </item>
        </widget>
       </item>
       <item row="6" column="1">
@@ -471,24 +716,10 @@
         </property>
        </widget>
       </item>
-      <item row="10" column="3">
-       <widget class="QLabel" name="label">
-        <property name="text">
-         <string>Number of Blocks</string>
-        </property>
-       </widget>
-      </item>
       <item row="4" column="0" colspan="5">
        <widget class="Line" name="line_3">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
-        </property>
-       </widget>
-      </item>
-      <item row="10" column="0">
-       <widget class="QLabel" name="FilterCompositionLabel">
-        <property name="text">
-         <string>Filter Composition</string>
         </property>
        </widget>
       </item>
@@ -538,25 +769,6 @@
         </property>
        </widget>
       </item>
-      <item row="10" column="1">
-       <widget class="QSlider" name="FilterCompositionSlider">
-        <property name="maximum">
-         <number>5</number>
-        </property>
-        <property name="pageStep">
-         <number>0</number>
-        </property>
-        <property name="value">
-         <number>1</number>
-        </property>
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="tickPosition">
-         <enum>QSlider::TicksBothSides</enum>
-        </property>
-       </widget>
-      </item>
       <item row="1" column="1">
        <widget class="QLineEdit" name="RotationShiftLineEdit">
         <property name="text">
@@ -571,41 +783,6 @@
         </property>
        </widget>
       </item>
-      <item row="9" column="1">
-       <widget class="QComboBox" name="SaveImageAsComboBox">
-        <item>
-         <property name="text">
-          <string>Block</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Single Files</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item row="9" column="4">
-       <widget class="QLineEdit" name="PaddingLineEdit">
-        <property name="text">
-         <string>0</string>
-        </property>
-       </widget>
-      </item>
-      <item row="9" column="3">
-       <widget class="QLabel" name="PaddingLabel">
-        <property name="text">
-         <string>Padding</string>
-        </property>
-       </widget>
-      </item>
-      <item row="9" column="0">
-       <widget class="QLabel" name="SaveImageAsLabel">
-        <property name="text">
-         <string>Save Slices as</string>
-        </property>
-       </widget>
-      </item>
       <item row="11" column="0" colspan="5">
        <widget class="Line" name="line_5">
         <property name="orientation">
@@ -613,15 +790,18 @@
         </property>
        </widget>
       </item>
-      <item row="6" column="2" rowspan="5">
-       <widget class="Line" name="line_7">
+      <item row="1" column="2" rowspan="3">
+       <widget class="Line" name="line_4">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
         </property>
        </widget>
       </item>
-      <item row="10" column="4">
+      <item row="9" column="4">
        <widget class="QSlider" name="NumberofBlocksSlider">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
         <property name="minimum">
          <number>1</number>
         </property>
@@ -642,26 +822,377 @@
         </property>
        </widget>
       </item>
-      <item row="3" column="0" colspan="2">
-       <widget class="QPushButton" name="pushButton_5">
+      <item row="7" column="3">
+       <widget class="QLabel" name="ImageFormatLabel">
         <property name="text">
-         <string>Adjust</string>
+         <string>Image Format</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="2" rowspan="3">
-       <widget class="Line" name="line_4">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
+      <item row="9" column="3">
+       <widget class="QLabel" name="NumberofBlocksLabel">
+        <property name="text">
+         <string>Number of Blocks</string>
         </property>
        </widget>
+      </item>
+      <item row="8" column="0">
+       <widget class="QLabel" name="SaveImageAsLabel">
+        <property name="text">
+         <string>Save Slices as</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="1">
+       <widget class="QComboBox" name="SaveImageAsComboBox">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <item>
+         <property name="text">
+          <string>Block</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Single Files</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QLabel" name="ImageSizeLabel">
+        <property name="text">
+         <string>Image Size</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0">
+       <widget class="QLabel" name="FilterCompositionLabel">
+        <property name="text">
+         <string>Filter Composition</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="3" colspan="2">
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <spacer name="PreviewReconButtonHorizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Preferred</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="PreviewReconButton">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="text">
+           <string>Preview</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="PreviewReconButtonHorizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Preferred</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item row="9" column="1">
+       <widget class="QSlider" name="FilterCompositionSlider">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="maximum">
+         <number>5</number>
+        </property>
+        <property name="pageStep">
+         <number>0</number>
+        </property>
+        <property name="value">
+         <number>1</number>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="tickPosition">
+         <enum>QSlider::TicksBothSides</enum>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="4">
+       <widget class="QComboBox" name="ImageFormaComboBox">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <item>
+         <property name="text">
+          <string>8 bits</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>32 bits</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <widget class="QComboBox" name="ImageSizeComboBox">
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <item>
+         <property name="text">
+          <string>2048 pixels</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1024 pixels</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>512 pixels</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="8" column="4">
+       <widget class="QLineEdit" name="PaddingLineEdit">
+        <property name="text">
+         <string>0</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="3">
+       <widget class="QLabel" name="PaddingLabel">
+        <property name="text">
+         <string>Padding</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="2">
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <spacer name="AdjustSinoButtonHorizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Preferred</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="AdjustSinoButton">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="text">
+           <string>Adjust</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="AdjustSinoButtonHorizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Preferred</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
       </item>
      </layout>
     </item>
+    <item row="6" column="3">
+     <widget class="Line" name="line_11">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="8" column="3">
+     <spacer name="verticalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>40</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
     <item row="5" column="3">
-     <layout class="QVBoxLayout" name="verticalLayout">
-      <item>
-       <widget class="QLabel" name="MoreOptionsLabel">
+     <layout class="QGridLayout" name="gridLayout_10">
+      <item row="1" column="0" rowspan="2">
+       <layout class="QGridLayout" name="gridLayout_11">
+        <item row="0" column="1">
+         <widget class="QLabel" name="PositionQueue">
+          <property name="font">
+           <font>
+            <family>Liberation Sans</family>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>X</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="PositionLabel">
+          <property name="font">
+           <font>
+            <family>Liberation Sans</family>
+            <pointsize>10</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Position:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="3">
+         <widget class="QPushButton" name="DownPositionQueueButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="ReconGUIResource.qrc">
+            <normaloff>:/Arrows/Images/rsz_red_arrow_downsvg.png</normaloff>:/Arrows/Images/rsz_red_arrow_downsvg.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="2">
+         <widget class="QPushButton" name="UpPositionQueueButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="ReconGUIResource.qrc">
+            <normaloff>:/Arrows/Images/rsz_greenarrow.png</normaloff>:/Arrows/Images/rsz_greenarrow.png</iconset>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="2" rowspan="2">
+       <layout class="QVBoxLayout" name="verticalLayout_18">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_15">
+          <item>
+           <widget class="QPushButton" name="CleanQueueButton">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>Clean All</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="RemoveFromQueueButton">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="text">
+             <string>Remove</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="1" rowspan="2">
+       <widget class="QPushButton" name="AddReconQueueButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+          <weight>75</weight>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="cursor">
+         <cursorShape>PointingHandCursor</cursorShape>
+        </property>
+        <property name="text">
+         <string>ADD RECON</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0" colspan="3">
+       <widget class="QLabel" name="QueueSettingsLabel">
         <property name="font">
          <font>
           <family>Liberation Sans</family>
@@ -670,114 +1201,15 @@
           <bold>true</bold>
          </font>
         </property>
-        <property name="layoutDirection">
-         <enum>Qt::LeftToRight</enum>
-        </property>
         <property name="text">
-         <string>More Options</string>
+         <string>Queue Settings</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
         </property>
        </widget>
       </item>
-      <item>
-       <layout class="QGridLayout" name="gridLayout_3">
-        <item row="0" column="1">
-         <widget class="QPushButton" name="pushButton_2">
-          <property name="text">
-           <string>Sinogram</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="3">
-         <widget class="QPushButton" name="pushButton_3">
-          <property name="text">
-           <string>H5 Options</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="0">
-         <widget class="QPushButton" name="pushButton">
-          <property name="text">
-           <string>Projection</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="2">
-         <widget class="QPushButton" name="pushButton_4">
-          <property name="text">
-           <string>Folder</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
      </layout>
-    </item>
-    <item row="5" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <spacer name="StartReconButtonhorizontalSpacer">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Preferred</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QPushButton" name="StartReconButton">
-        <property name="text">
-         <string>Start Recon</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="StopReconButton">
-        <property name="text">
-         <string>Stop Recon</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="StartReconButtonhorizontalSpacer_2">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Preferred</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-     </layout>
-    </item>
-    <item row="3" column="2" rowspan="3">
-     <widget class="Line" name="line_2">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="6" column="0" colspan="4">
-     <widget class="Line" name="line_8">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-     </widget>
     </item>
    </layout>
   </widget>
@@ -786,7 +1218,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>766</width>
+     <width>873</width>
      <height>27</height>
     </rect>
    </property>
@@ -813,7 +1245,6 @@
  </widget>
  <resources>
   <include location="ReconGUIResource.qrc"/>
-  <include location="ReconGUIResource.qrc"/>
  </resources>
  <connections>
   <connection>
@@ -823,8 +1254,8 @@
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>921</x>
-     <y>505</y>
+     <x>755</x>
+     <y>587</y>
     </hint>
     <hint type="destinationlabel">
      <x>785</x>
@@ -833,18 +1264,18 @@
    </hints>
   </connection>
   <connection>
-   <sender>StartReconButton</sender>
+   <sender>PreviewReconButton</sender>
    <signal>clicked()</signal>
    <receiver>progressBar</receiver>
    <slot>show()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>125</x>
-     <y>498</y>
+     <y>531</y>
     </hint>
     <hint type="destinationlabel">
-     <x>356</x>
-     <y>504</y>
+     <x>628</x>
+     <y>586</y>
     </hint>
    </hints>
   </connection>

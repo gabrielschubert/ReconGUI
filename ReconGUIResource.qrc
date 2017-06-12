@@ -2,7 +2,14 @@
   <qresource prefix="MainWindowIcon">
     <file>Images/LNLS_logo_mini.jpg</file>
   </qresource>
+  <qresource prefix="ImageJ">
+    <file>Images/ImageJ.png</file>
+  </qresource>
   <qresource prefix="FolderIcon">
     <file>Images/closed_folder.png</file>
+  </qresource>
+  <qresource prefix="Arrows">
+    <file>Images/rsz_red_arrow_downsvg.png</file>
+    <file>Images/rsz_greenarrow.png</file>
   </qresource>
 </RCC>
