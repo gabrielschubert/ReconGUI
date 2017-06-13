@@ -9,6 +9,7 @@
     <file>Images/closed_folder.png</file>
   </qresource>
   <qresource prefix="Arrows">
+    <file>Images/Update.png</file>
     <file>Images/rsz_red_arrow_downsvg.png</file>
     <file>Images/rsz_greenarrow.png</file>
   </qresource>
